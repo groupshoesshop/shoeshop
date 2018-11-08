@@ -86,7 +86,7 @@ ul.multi-column-dropdown li a:hover{
 /* //navigation */
 /*-- cart details--*/
 .dropdown-menu.columns-3 {
-   min-width: 500px;
+   min-width: 300px;
     padding: 30px 30px;
 }
 .multi-gd-img img{
