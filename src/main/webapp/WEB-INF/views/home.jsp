@@ -1,9 +1,3 @@
-<%-- 
-    Document   : home
-    Created on : Nov 2, 2018, 2:00:19 PM
-    Author     : phanxuan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

@@ -23,7 +23,7 @@
       
               <div class="product-sec1">
                   <div class="heading-tittle">
-                     <h3 class="heading-tittle">Giày da nam</h3>
+                     <h3 class="heading-tittle">${titelCategoryType}</h3>
                     
                   </div>
                   <div class="seach-price">

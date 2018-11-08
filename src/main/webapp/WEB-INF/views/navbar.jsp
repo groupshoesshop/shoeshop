@@ -45,15 +45,15 @@
               <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav menu__list">
                       <li class="active">
-                          <a class="nav-stylehead" href="index.html">Home
+                          <a class="nav-stylehead" href="${pageContext.request.contextPath}/shop">Home
                               <span class="sr-only">(current)</span>
                           </a>
                       </li>
                       <li class="">
-                          <a class="nav-stylehead" href="about.html">Giày lười</a>
+                          <a class="nav-stylehead" href="${pageContext.request.contextPath}/product/giay-luoi?productTypeId=2">Giày lười</a>
                       </li>
                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giày Da
+                          <a href="${pageContext.request.contextPath}/product/giay-da" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giày Da
                               <span class="caret"></span>
                           </a>
                           <ul class="dropdown-menu multi-column columns-3">
@@ -61,19 +61,19 @@
                                   <div class="col-sm-4 col-md-4 multi-gd-img">
                                       <ul class="multi-column-dropdown">
                                           <li>
-                                              <a href="product.html">Giày Rọ</a>
+                                              <a href="${pageContext.request.contextPath}/product/giay-ro?productTypeId=4">Giày Rọ</a>
                                           </li>
                                           <li>
-                                              <a href="product.html">Giày Mọi</a>
+                                              <a href="${pageContext.request.contextPath}/product/giay-moi?productTypeId=5">Giày Mọi</a>
                                           </li>
                                           <li>
-                                              <a href="product.html">Giày SABO</a>
+                                              <a href="${pageContext.request.contextPath}/product/giay-sabo?productTypeId=6">Giày Sabo</a>
                                           </li>
                                           <li>
-                                              <a href="product.html">Giày Tây</a>
+                                              <a href="${pageContext.request.contextPath}/product/giay-tay?productTypeId=7">Giày Tây</a>
                                           </li>
                                           <li>
-                                              <a href="product.html">Boot Da</a>
+                                              <a href="${pageContext.request.contextPath}/product/giay-boot-da?productTypeId=8">Boot Da</a>
                                           </li>
                                           
                                       </ul>
@@ -87,7 +87,7 @@
                           </ul>
                       </li>
                       <li class="">
-                          <a class="nav-stylehead" href="about.html">Giày thể thao</a>
+                          <a class="nav-stylehead"  href="${pageContext.request.contextPath}/product/giay-the-thao?productTypeId=1">Giày thể thao</a>
                       </li>
                       <li class="">
                           <a class="nav-stylehead" href="faqs.html">Giày cổ điển</a>

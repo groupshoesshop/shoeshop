@@ -29,11 +29,38 @@ public class ProductDAO implements ProductDAOImp{
         
         Session session = sessionFactory.getCurrentSession();
         List<ProductEntity> listProducts = new ArrayList<ProductEntity>();
-        String query = "From product";
-        listProducts = session.createQuery("from ProductEntity").getResultList();
+        String query = "From ProductEntity";
+        listProducts = session.createQuery(query).getResultList();
         for (int i = 0; i < listProducts.size(); i++) {
             System.out.println( "name product: == "+listProducts.get(i).getProductName());
         }
+        return listProducts;
+    }
+
+    @Override
+    @Transactional
+    public List<ProductEntity> getListProductByCategoryType(int productTypeId) {
+      Session session = sessionFactory.getCurrentSession();
+        List<ProductEntity> listProducts = new ArrayList<ProductEntity>();
+        String query = "From ProductEntity p where p.categoryType.typeId = " + productTypeId;
+        listProducts = session.createQuery(query).getResultList();
+        
+        return listProducts;
+        
+    }
+    
+    @Override
+    @Transactional
+    public List<ProductEntity> getListProductByGiayDa() {
+        Session session = sessionFactory.getCurrentSession();
+        List<ProductEntity> listProducts = new ArrayList<ProductEntity>();
+        String query = "From ProductEntity p where "
+                + "p.categoryType.typeId = 4 or " 
+                + "p.categoryType.typeId = 5 or " 
+                + "p.categoryType.typeId = 6 or " 
+                + "p.categoryType.typeId = 7 or " 
+                + "p.categoryType.typeId = 8" ;
+        listProducts = session.createQuery(query).getResultList();
         return listProducts;
     }
     

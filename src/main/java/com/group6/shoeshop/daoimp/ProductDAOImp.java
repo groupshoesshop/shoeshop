@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface ProductDAOImp {
     List<ProductEntity> getListProduct();
+    List<ProductEntity> getListProductByCategoryType(int productTypeId);
+    List<ProductEntity> getListProductByGiayDa();
+    
 }
