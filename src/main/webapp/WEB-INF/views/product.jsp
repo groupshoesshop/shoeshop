@@ -53,8 +53,8 @@
                                           <a href="${pageContext.request.contextPath}/product/${product.productName}${product.productId}">${product.productName}</a>
                                       </h4>
                                       <div class="info-product-price">
-                                          <span class="item_price">${product.price.unitprice}</span>
-                                          <del>${product.price.unitprice}</del>
+                                          <span class="item_price">${product.unitprice}</span>
+                                          <del>${product.unitprice}</del>
                                       </div>
                                       <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                                           <form action="#" method="post">

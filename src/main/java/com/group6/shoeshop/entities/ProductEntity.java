@@ -2,6 +2,7 @@
 package com.group6.shoeshop.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -34,19 +35,14 @@ public class ProductEntity implements Serializable{
     private String image2;
     private String image3;
     
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "productId")
-    private PriceEntity price;
+    private String unitprice;
     
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "productId")
     private Set<ProductDetailsEntity> productDetails;
     
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "promotiondetails",
-            joinColumns = {@JoinColumn(name = "productId", referencedColumnName = "productId")},
-            inverseJoinColumns = {@JoinColumn(name = "providerId", referencedColumnName = "providerId")})
-    Set<PromotionsEntity> listPromotions;
+        List<PromotionDetailsEntity> listPromotionDetails;
     
     
     public ProductEntity() {
@@ -61,7 +57,21 @@ public class ProductEntity implements Serializable{
         this.description = description;
     }
 
-    public ProductEntity(int productId, String productName, CategoryTypeEntity categoryType, CategoryProviderEntity categoryProvider, String description, String image1, String image2, String image3, PriceEntity price, Set<ProductDetailsEntity> productDetails, Set<PromotionsEntity> listPromotions) {
+//    public ProductEntity(int productId, String productName, CategoryTypeEntity categoryType, CategoryProviderEntity categoryProvider, String description, String image1, String image2, String image3, String unitprice, Set<ProductDetailsEntity> productDetails, List<PromotionDetailsEntity> listPromotionDetails) {
+//        this.productId = productId;
+//        this.productName = productName;
+//        this.categoryType = categoryType;
+//        this.categoryProvider = categoryProvider;
+//        this.description = description;
+//        this.image1 = image1;
+//        this.image2 = image2;
+//        this.image3 = image3;
+//        this.unitprice = unitprice;
+//        this.productDetails = productDetails;
+//        this.listPromotionDetails = listPromotionDetails;
+//    }
+
+    public ProductEntity(int productId, String productName, CategoryTypeEntity categoryType, CategoryProviderEntity categoryProvider, String description, String image1, String image2, String image3, String unitprice, Set<ProductDetailsEntity> productDetails) {
         this.productId = productId;
         this.productName = productName;
         this.categoryType = categoryType;
@@ -70,10 +80,15 @@ public class ProductEntity implements Serializable{
         this.image1 = image1;
         this.image2 = image2;
         this.image3 = image3;
-        this.price = price;
+        this.unitprice = unitprice;
         this.productDetails = productDetails;
-        this.listPromotions = listPromotions;
     }
+
+    
+
+    
+
+    
 
     public int getProductId() {
         return productId;
@@ -115,13 +130,17 @@ public class ProductEntity implements Serializable{
         this.description = description;
     }
 
-    public PriceEntity getPrice() {
-        return price;
+    public String getUnitprice() {
+        return unitprice;
     }
 
-    public void setPrice(PriceEntity price) {
-        this.price = price;
+    public void setUnitprice(String unitprice) {
+        this.unitprice = unitprice;
     }
+
+   
+
+   
 
     public Set<ProductDetailsEntity> getProductDetails() {
         return productDetails;
@@ -131,13 +150,7 @@ public class ProductEntity implements Serializable{
         this.productDetails = productDetails;
     }
 
-    public Set<PromotionsEntity> getListPromotions() {
-        return listPromotions;
-    }
-
-    public void setListPromotions(Set<PromotionsEntity> listPromotions) {
-        this.listPromotions = listPromotions;
-    }
+   
 
     public String getImage1() {
         return image1;
@@ -161,6 +174,14 @@ public class ProductEntity implements Serializable{
 
     public void setImage3(String image3) {
         this.image3 = image3;
+    }
+
+    public List<PromotionDetailsEntity> getListPromotionDetails() {
+        return listPromotionDetails;
+    }
+
+    public void setListPromotionDetails(List<PromotionDetailsEntity> listPromotionDetails) {
+        this.listPromotionDetails = listPromotionDetails;
     }
     
     

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : footer
-    Created on : Nov 2, 2018, 3:41:46 PM
-    Author     : phanxuan
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -14,6 +10,9 @@
 	<script src='<c:url value="/resources/js/classie.js"></c:url>'></script>
 	
 	<!-- //nav -->
+        <!--content-->
+        <script src='<c:url value="/resources/js/cumstom.js"></c:url>'></script>
+        <!--end content-->
 	<!-- cart-js -->
 	<script src='<c:url value="/resources/js/minicart.js"></c:url>'></script>
 	<script>

@@ -2,6 +2,7 @@
 package com.group6.shoeshop.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -18,8 +19,8 @@ import javax.persistence.Table;
 public class PromotionsEntity implements Serializable{
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int providerId;
-    private String ProviderName;
+    private int promotionId;
+    private String promotionName;
     
     private String amount;
     private String dateStart;
@@ -28,28 +29,25 @@ public class PromotionsEntity implements Serializable{
     private String image;
     
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "promotiondetails",
-            joinColumns = {@JoinColumn(name = "providerId", referencedColumnName = "providerId")},
-            inverseJoinColumns = {@JoinColumn(name = "productId", referencedColumnName = "productId")})
-    Set<ProductEntity> listProducts;
+    List<PromotionDetailsEntity> listPromotionDetails;
 
     public PromotionsEntity() {
     }
 
-    public int getProviderId() {
-        return providerId;
+    public int getPromotionId() {
+        return promotionId;
     }
 
-    public void setProviderId(int providerId) {
-        this.providerId = providerId;
+    public void setPromotionId(int promotionId) {
+        this.promotionId = promotionId;
     }
 
-    public String getProviderName() {
-        return ProviderName;
+    public String getPromotionName() {
+        return promotionName;
     }
 
-    public void setProviderName(String ProviderName) {
-        this.ProviderName = ProviderName;
+    public void setPromotionName(String promotionName) {
+        this.promotionName = promotionName;
     }
 
     public String getAmount() {
@@ -92,13 +90,14 @@ public class PromotionsEntity implements Serializable{
         this.image = image;
     }
 
-    public Set<ProductEntity> getListProducts() {
-        return listProducts;
+    public List<PromotionDetailsEntity> getListPromotionDetails() {
+        return listPromotionDetails;
     }
 
-    public void setListProducts(Set<ProductEntity> listProducts) {
-        this.listProducts = listProducts;
+    public void setListPromotionDetails(List<PromotionDetailsEntity> listPromotionDetails) {
+        this.listPromotionDetails = listPromotionDetails;
     }
-    
+
+   
     
 }

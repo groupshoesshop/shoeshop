@@ -49,9 +49,7 @@
                               <span class="sr-only">(current)</span>
                           </a>
                       </li>
-                      <li class="">
-                          <a class="nav-stylehead" href="about.html">Giày lười</a>
-                      </li>
+                      
                       <li class="dropdown">
                           <a href="#" class="dropdown-toggle nav-stylehead" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giày Da
                               <span class="caret"></span>
@@ -62,6 +60,9 @@
                                       <ul class="multi-column-dropdown">
                                           <li>
                                               <a href="product.html">Giày Rọ</a>
+                                          </li>
+                                          <li class="">
+                                              <a class="nav-stylehead" href="about.html">Giày lười</a>
                                           </li>
                                           <li>
                                               <a href="product.html">Giày Mọi</a>

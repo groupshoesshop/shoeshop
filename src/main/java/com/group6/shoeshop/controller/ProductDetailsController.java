@@ -12,6 +12,6 @@ public class ProductDetailsController {
      @GetMapping("/BHASUIA")
     public String Default(){
         
-        return "productDetails";
+        return "productdetails";
     }
 }

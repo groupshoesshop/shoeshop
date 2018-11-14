@@ -4,6 +4,7 @@ package com.group6.shoeshop.entities;
 import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,11 +23,11 @@ public class ProductDetailsEntity implements Serializable{
     @JoinColumn(name = "productId")
     private ProductEntity product;
     
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "colorId")
     private ProductColorEntity productColor;
     
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "sizeId")
     private ProductSizeEntity productSize;
     private String inputDate;
